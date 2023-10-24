@@ -1,0 +1,56 @@
+{
+  "name": "Pyrogram String Session Generator",
+  "description": "Telegram bot to generate pyrogram string session",
+  "logo": "https://graph.org/file/ba136d8897f464317dfdf.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/Abdulrahmman8894/StringSessionBot",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "Don't change ANYTHING.",
+      "required": true,
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": "24494495"
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": "883ba24ab125fb77cdfe6fb54408c569"
+    },
+    "BOT_TOKEN": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": "6859156795:AAH8IDaYPfFn2vf-x2wsJOFkI8pnbxPCQ2o"
+    },
+    "MUST_JOIN": {
+      "description": "Add username/id of a channel/group",
+      "required": false,
+      "value": "@sessions77"
+    }
+  }
+}
